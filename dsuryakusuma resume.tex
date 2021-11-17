@@ -1,0 +1,192 @@
+\documentclass[a4paper,10pt]{article}
+
+% from overleaf - Professional CV ~ Plasmati : https://www.overleaf.com/latex/templates/professional-cv/wvqwpvrmrvkh
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+% \usepackage[big]{layaureo} 				%better formatting of the A4 page
+
+\usepackage{fullpage}
+
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular}
+\usepackage{titlesec}
+
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+% \addtolength{\voffset}{-1.1cm}
+\usepackage[margin=0.8in]{geometry}
+
+
+
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{26mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+
+\pagestyle{empty} % non-numbered pages
+
+% \font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+% \par{\centering
+% 		{\Huge \textsc{Daniel Suryakusuma}
+% 	}\bigskip\par}
+
+
+%---------------------------------------------------
+%	NAME / Contact
+%---------------------------------------------------
+
+\par{\centering{\Huge \textsc{Daniel Suryakusuma} } \par} % Name 
+\begin{center}
+\textsc{Phone:}  (909) 569 - 5177 \qquad
+\textsc{email:}  \href{mailto:daniel@dsury.com}{daniel@dsury.com}
+\end{center}
+
+% %----------------------------------------------------------------------------
+% %	ACTUARIAL EXAMS
+% %----------------------------------------------------------------------------
+
+\section{Actuarial Exams}
+\begin{tabular}{r|p{4cm}}
+\textsc{Exam MAS-I: } & Sitting May 2022 \\
+\textsc{Exam 5: } & Taken Oct 2021 \\
+\textsc{Exam 3/IFM: } & Passed Jul 2020 \\
+\textsc{Exam 2/FM: } & Passed Oct 2017 \\
+\textsc{Exam 1/P: } & Passed Jul 2017
+% \footnotesize{\textsc{Exam MAS-I: }} & \footnotesize{ Sitting May 2022 } \\
+% \footnotesize{\textsc{Exam 5: }} & \footnotesize{ Taken Oct 2021 } \\
+% \footnotesize{\textsc{Exam 3/IFM: }} & \footnotesize{ Passed Jul 2020 } \\
+% \footnotesize{\textsc{Exam 2/FM: }} & \footnotesize{ Passed Oct 2017 } \\
+% \footnotesize{\textsc{Exam 1/P: }} & \footnotesize{ Passed Jul 2017 } 
+\end{tabular}
+
+
+%Section: Work Experience at the top, after actuarial exams.
+
+\section{Work Experience}
+
+
+%---- Work Experience #1 --------------------------
+\begin{tabular}{r|p{12cm}}
+\textsc{Jul 2021} - {Current} & \textsc{Mercury Insurance Group}\\
+\textsc{Orange County, CA} & \emph{Actuarial Analyst II}\\ 
+& \footnotesize{
+        
+       \textbullet Performed deep-dive analyses as AZ State Actuary, leveraging various reserving techniques and analyzing internal and competitor loss trends for rate indications. Collaborate with PM, R\&D, Claims, and Underwriting to drive profitable growth. \newline
+    
+        \textbullet Designed new country-wide Personal Umbrella product introducing innovative segmentation. Built new tools to compute rating factors, off-balance and dislocation, triangles and exhibits for CA rate/rule/form filing. Teamed up with IT, Marketing, and UW for database and UI/UX design to ensure successful book conversion into new IT system. \newline
+
+     \textbullet Programmed automated R script to scrape, compile, and organize competitor product filings. Deliver direct, accurate, and timely industry information to executive and marketing teams on key changes to competitor product rating plans or underwriting risk appetite. 
+}\\
+\multicolumn{2}{c}{} \\
+
+
+%---- Work Experience #2 --------------------------
+
+\textsc{May 2020 - Jun 2021} & \textsc{Mercury Insurance Group}\\
+\textsc{Orange County, CA} & \emph{Product Analyst - State Product Management}\\ 
+& \footnotesize{
+        
+        \textbullet Constructed a growth optimization predictive model, isolating independent agency locations with greatest growth and cross-sell opportunities within auto, home, and umbrella. Presented analysis to c-suite officers, marketing, and key stakeholders. Partnered with Marketing to integrate model and process into extensive agency vetting process.   \newline 
+        
+        \textbullet Programmed large-scale quote dislocation tool in R to measure projected rate competitiveness to market. Co-authored Mercury's \href{https://interactive.web.insurance.ca.gov/apex_extprd/f?p=186:2:3381815326064::NO:RP:P2_COMPANY_NAME,P2_FILE_NUM,P2_FILING_TYPE,P2_GROUP_NUM,P2_LINE_CODE,P2_LINE_TYPE,P2_NAIC_NUM,P2_PERCENT_CHANGE_REQUEST,P2_PERCENT_FILTER_TYPE,P2_PN_FROM_DATE,P2_PN_TO_DATE,P2_PROGRAM,P2_SERFF_NUM:Mercury\%20Insurance\%20Company,21-628,,,AUTO\%20LIAB\%2FPHYS\%20DAMAGE,PERSONAL,,,,01\%2F01\%2F2020,,,}{CA PPA Class Plan filing}. Presented analysis and projected changes to Mercury's largest book to executive team for buy-in. \newline
+        
+        \textbullet Bootstrapped KPI reporting for successful launch of MercuryGO UBI telematics program. Identified early enhancements and equipped Mercury's outbound call center with automated daily reporting to significantly enhance customer experience, improving app installation rate +30\%.
+
+} %\\
+\multicolumn{2}{c}{} \\
+\end{tabular}
+
+%---- Work Experience #3 --------------------------
+
+% keep empty 
+
+
+
+
+%------Education-------------------------
+\section{Education}
+\begin{tabular}{rl}	
+\textsc{May 2020} & \textbf{University of California, Berkeley}\\
+& B.A. Applied Mathematics (Statistics)	\\
+& Major GPA: 3.46/4.00 \\
+&\\
+
+% \textsc{Jan 2017} & \textbf{University of California, Berkeley - Extension}\\
+% & C.P. Certificate Program in Paralegal Studies \\
+% &\\
+\end{tabular}
+
+
+
+
+
+
+
+%---- Technical Projects --------------------------
+\section{Technical Projects}
+\begin{tabular}{r|p{15cm}}
+
+
+&\href{https://dsury.com/case-competition-fall-2019/}{\textsc{Cal Actuarial League 2019 Case Competition:} P\&C, General Analytics} \\
+& \footnotesize{
+       \textbullet Presented end-to-end business solution, driving and interpreting a Tweedie GLM to classify driver risk to optimize an insurer's risk portfolio.
+}
+\multicolumn{2}{c}{} 
+
+&\href{https://dsury.com/bohemian-rhapsody/}{\textsc{Insuring Against Going Viral:} Life Expectancy on Spotify Top Charts} \\
+& \footnotesize{
+       \textbullet Quantified interaction effect between fixed subscription premiums and royalty claims payments for viral songs. Web-scraped data and built query-able PostgreSQL database to infer updated trends for consumer behavior.
+}
+\multicolumn{2}{c}{} 
+
+&\href{https://dsury.com/tex/}{\textsc{Livetype TeX Library} (GitHub Atom, Open-Source) } \\
+& \footnotesize{
+       \textbullet Built customizeable .cson library for code completion and error correction, enabling real-time live typesetting of technical lecture notes. Volunteered under UC Berkeley Statistics professor Jim Pitman as \href{https://150.dsury.com}{scribe for Stochastic Processes}.
+% } % \multicolumn{2}{c}{} 
+\end{tabular}
+
+%------Technical Skills // cut into page 2 -------------------------
+\section{Technical Skills}
+\begin{tabular}{r|p{12cm}}
+\textsc{Skills: } & Predictive Modeling, Actuarial Ratemaking \& Reserving  \\
+\textsc{Programming: } & R, Excel, SQL, Python, LaTeX, HTML/CS/JS
+\end{tabular}
+
+
+
+
+\end{document}
